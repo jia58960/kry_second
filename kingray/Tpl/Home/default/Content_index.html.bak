@@ -1,0 +1,262 @@
+<include file="./kingray/Tpl/Home/default/header.html" />
+<div class="full-width-wrapper">
+    <div class="fixed-width-wrapper" id="body-content">
+        <!--Content-->
+        <div id="content" class="float-left content-left">
+            <div class="header-text">
+                <ul id="breadcrumbs">
+                    <li>
+                        <a href="__URL__/index" title="">
+                            首页
+                        </a>
+                    </li>
+                    <volist id="voname" name="navarr">
+						<li>
+                            <a href="{$voname.url}" title="">
+                            {$voname.name}
+                            </a>
+                        </li>
+                    </volist>
+                </ul>
+                <h1 class="first-word double-color sp">
+                    文章列表
+                </h1>
+                <ul id="view-switcher">
+                    <li>
+                        <a href="#display-list-alternate" class="display-list-alternate" title="">
+                            List ALternate
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#display-list" class="display-list" title="">
+                            List view
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#display-short" class="display-short" title="">
+                            Double column
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="entry-content">
+                <ul class="display-list list-blog-entry" id="list-blog-entry">
+                <volist id="artList" name="list">
+                    <li>
+                     
+                        <div class="blog-entry-content">
+                            <h2>
+                                <span href="#" class="first-word">
+                                   {$artList.title}
+                                </span>
+                            </h2>
+                            <div class="posts-info">
+                                <span class="date" title="">
+                                    {$artList.time|date='Y-m-d',###}
+                                </span>
+                                <span class="category">
+                                         原创
+                                </span>
+                            </div>
+                            <p>
+								{$artList.content|strip_tags|msubstr=0,50}
+                            </p>
+                            <a class="read-more" href=" __URL__/article/detail/{$artList.id}" title="阅读详细">
+                                阅读详细
+                            </a>
+                        </div>
+                    </li>      
+                  </volist>            
+               </ul>
+                <!--Pagination-->
+                <div class="clear">
+                </div>
+                <div class="page-pagination clear">
+               	 {$page}
+                    <!--<a href="#" title="">
+                        Prev
+                    </a>
+                    <a href="#" title="">
+                        1
+                    </a>
+                    <a href="#" title="" class="current">
+                        2
+                    </a>
+                    <a href="#" title="">
+                        3
+                    </a>
+                    <a href="#" title="">
+                        4
+                    </a>
+                    <a href="#" title="">
+                        5
+                    </a>
+                    <span>
+                        ...
+                    </span>
+                    <a href="#" title="">
+                        15
+                    </a>
+                    <a href="#" title="">
+                        Next
+                    </a>-->
+                </div>
+                <!--/Pagination-->
+            </div>
+        </div>
+        <!--/Content-->
+        <!--Sidebar-->
+        <div id="sidebar" class="float-right">
+            <!--box-->
+            <div class="box">
+                <h1 class="first-word double-color sp">
+                    {$Lone.name}
+                </h1>
+                <ul class="list cat">
+                    <volist id="vosub" name="subList">
+                        <li>
+                            <a href="{$vosub.url}" id="{$vosub.id}">
+                                {$vosub.nav_name}
+                            </a>
+                        </li>
+                    </volist>
+                </ul>
+                <input type="hidden" value="{$currentId}" id="CurrentId"/>
+                <script type="text/javascript">
+					$(function (){
+						var cureentID = $("#CurrentId").val();
+							$(".cat li a").each(function(index, element) {
+                                	if($(this).attr('id')==cureentID){
+										$(this).parent().addClass('current');
+										}
+                            });
+						});
+                </script>
+            </div>
+            <!--/box-->
+            <!--box-->
+            <div class="box">
+                <h1 class="first-word double-color sp">
+                    热门文章
+                </h1>
+                <ul class="zigzag list">
+                <volist id="hotnews" name="hotNews">
+                    <li> 
+                        <div class="img-border preloading-light align-left">
+                            <img src="__PUBLIC__/Home/default/Images/pix/01_Home_14-05.png" alt="">
+                        </div>
+                        <strong>
+                            {$hotnews.title}
+                        </strong>
+                        <span>
+                            {$hotnews.content|strip_tags|msubstr=0,20}
+                        </span>
+                        <a href="__URL__/article/detail/{$hotnews.id}" title="">
+                            more
+                        </a>
+                    </li>
+                   </volist>
+                </ul>
+            </div>
+            <!--/box-->
+            <!--box-->
+            <div class="box">
+                <h1 class="first-word double-color sp">
+                    友情链接
+                </h1>
+                <ul class="list point">
+                                <li>
+                                    <a href="http://www.baidu.com" title="">百度一下</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.google.com.hk" title="">谷歌
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://sz-kingray.com" title="">金瑞亿旧站
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://mail.sz-kingray.com" title="">公司邮箱
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">
+                                      
+                                        Lorem ipsum dolor
+                                    </a>
+                                </li>
+                            </ul>
+            </div>
+            <!--/box-->
+            <!--box-->
+            <!--<div class="box">
+                <h1 class="first-word double-color sp">
+                    档案表
+                </h1>
+                <ul class="list cat">
+                    <li>
+                        <a href="#" title="">
+                            December 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            November 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            October 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            September 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            August 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            July 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            May 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            April 2011
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            March
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            February
+                        </a>
+                    </li>
+                </ul>
+            </div>-->
+            <!--/box-->
+        </div>
+        <!--/Sidebar-->
+        <include file="./kingray/Tpl/Home/default/footer2.html" />
+    </div>
+</div>
+<include file="./kingray/Tpl/Home/default/footer.html" />
+
+
+
+<a href="#" class="preloading-light img-border" title="">
+                            <img src="__PUBLIC__/Home/default/Images/pix/website3.jpg" alt="">
+                        </a>

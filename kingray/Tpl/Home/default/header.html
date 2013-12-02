@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="金瑞亿官网, 金瑞亿投资发展有限公司, 投融资" name="description" />
+        <meta content="jia58960" name="author" />
+        <title>
+           深圳市金瑞亿投资发展有限公司
+        </title>
+        <load href="__PUBLIC__/Home/default/plugins/font-awesome/css/font-awesome.min.css" />
+        <load href="__PUBLIC__/Home/default/plugins/bootstrap/css/bootstrap.min.css" />
+
+        <load href="__PUBLIC__/Home/default/plugins/fancybox/source/jquery.fancybox.css" />
+        <load href="__PUBLIC__/Home/default/plugins/revolution_slider/css/rs-style.css" media="screen"/>
+        <load href="__PUBLIC__/Home/default/plugins/revolution_slider/rs-plugin/css/settings.css" media="screen" />
+        <load href="__PUBLIC__/Home/default/plugins/bxslider/jquery.bxslider.css" />
+
+        <load href="__PUBLIC__/Home/default/Css/style-metronic.css" />
+        <load href="__PUBLIC__/Home/default/Css/style.css" />
+        <load href="__PUBLIC__/Home/default/Css/themes/blue.css" />
+        <load href="__PUBLIC__/Home/default/Css/style-responsive.css" />
+        <load href="__PUBLIC__/Home/default/Css/custom.css" />
+        
+        <load href="__PUBLIC__/Home/default/plugins/jquery-1.8.3.min.js" />       
+        <load href="__PUBLIC__/Home/default/plugins/jquery-migrate-1.2.1.min.js" />
+        
+        <link rel="shortcut icon" href="favicon.ico" />
+
+    </head>
+    
+    <body class="page-header-fixed">
+   		<!-- BEGIN STYLE CUSTOMIZER -->
+    <div class="color-panel hidden-sm">
+        <div class="color-mode-icons icon-color"></div>
+        <div class="color-mode-icons icon-color-close"></div>
+        <div class="color-mode">
+            <p>选择主题</p>
+            <ul class="inline">
+                <li class="color-blue current color-default" data-style="blue"></li>
+                <li class="color-red" data-style="red"></li>
+                <li class="color-green" data-style="green"></li>
+                <li class="color-orange" data-style="orange"></li>
+            </ul>
+            <label>
+                <span>头部</span>
+                <select class="header-option form-control input-small">
+                    <option value="default" selected>Default</option>
+                    <option value="fixed">Fixed</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <!-- END BEGIN STYLE CUSTOMIZER -->     
+
+    <!-- BEGIN HEADER -->
+    <div class="header navbar navbar-default no-scrolling-fixed navbar-fixed-top">
+        <!-- BEGIN TOP BAR -->
+        <div class="front-topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-9">
+                        <ul class="list-unstyle inline">
+                            <li><i class="fa fa-phone topbar-info-icon top-2"></i>Call us: <span>(0755) 66659000</span></li>
+                            <li class="sep"><span>|</span></li>
+                            <li><i class="fa fa-envelope-o topbar-info-icon top-2"></i>Email: <span>lzd@sz-kingray.com</span></li>
+                        </ul>
+                    </div>
+                    <!-- 登录与注册<div class="col-md-3 col-sm-3 login-reg-links">
+                        <ul class="list-unstyled inline">
+                            <li><a href="page_login.html">Login</a></li>
+                            <li class="sep"><span>|</span></li>
+                            <li><a href="page_signup.html">Signup</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>        
+        </div>
+        <!-- END TOP BAR -->
+
+        <div class="container">
+            <div class="navbar-header">
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <button class="navbar-toggle btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN LOGO (you can use logo image instead of text)-->
+                <a class="navbar-brand logo-v1" href="__URL__/index">
+                    <img src="__PUBLIC__/Home/default/Images/nav_logo.png" id="logoimg" alt="">
+                </a>
+                <!-- END LOGO -->
+            </div>
+        
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                            <a href="{$menu.homeurl}">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    <volist name="menu.nav" id="navr">
+                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-hover="dropdown"  href="{$navr.url}">
+                            {$navr.nav_name}
+
+                            <i class="fa fa-angle-down"></i>                            
+                        </a>
+                        <ul class="dropdown-menu">
+                            <volist name="navr.sub" id="vo">
+                                <li>
+                                <a href="{$vo.url}" title="">
+                                    {$vo.nav_name}
+                                   </a>
+                                  </li>
+                            </volist>
+                        </ul>
+                    </li>
+                    </volist>
+                    <li class="menu-search">
+                        <span class="sep"></span>
+                        <i class="fa fa-search search-btn"></i>
+
+                        <div class="search-box">
+                            <form action="#">
+                                <div class="input-group input-large">
+                                    <input class="form-control" type="text" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn theme-btn">Go</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div> 
+                    </li>
+                </ul>                         
+            </div>
+            <!-- BEGIN TOP NAVIGATION MENU -->
+        </div>
+
+    </div>
+
