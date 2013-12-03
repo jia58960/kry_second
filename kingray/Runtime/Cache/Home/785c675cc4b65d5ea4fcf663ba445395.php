@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport" /> -->
         <meta content="金瑞亿官网, 金瑞亿投资发展有限公司, 投融资" name="description" />
         <meta content="jia58960" name="author" />
         <title>
@@ -22,7 +22,7 @@
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/default/Css/style-metronic.css" />
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/default/Css/style.css" />
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/default/Css/themes/blue.css" />
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/default/Css/style-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/default/Css/style-non-responsive.css" />
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/default/Css/custom.css" />
         
         <script type="text/javascript" src="__PUBLIC__/Home/default/plugins/jquery-1.8.3.min.js"></script>       
@@ -34,7 +34,7 @@
     
     <body class="page-header-fixed">
    		<!-- BEGIN STYLE CUSTOMIZER -->
-    <div class="color-panel hidden-sm">
+    <!-- <div class="color-panel hidden-sm">
         <div class="color-mode-icons icon-color"></div>
         <div class="color-mode-icons icon-color-close"></div>
         <div class="color-mode">
@@ -53,7 +53,7 @@
                 </select>
             </label>
         </div>
-    </div>
+    </div> -->
     <!-- END BEGIN STYLE CUSTOMIZER -->     
 
     <!-- BEGIN HEADER -->
@@ -62,7 +62,7 @@
         <div class="front-topbar">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 col-sm-9">
+                    <div class="col-md-9 col-xs-9 col-sm-9">
                         <ul class="list-unstyle inline">
                             <li><i class="fa fa-phone topbar-info-icon top-2"></i>Call us: <span>(0755) 66659000</span></li>
                             <li class="sep"><span>|</span></li>
@@ -151,10 +151,10 @@
     <!-- BEGIN BREADCRUMBS -->   
     <div class="row breadcrumbs margin-bottom-40">
         <div class="container">
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-4 col-sm-4 col-xs-4">
                 <h1> </h1>
             </div>
-            <div class="col-md-8 col-sm-8">
+            <div class="col-md-8 col-sm-8 col-xs-8">
                 <ul class="pull-right breadcrumb">
                 <li><a href="__URL__/index" title="">首页</a></li>
                 <?php if(is_array($navarr)): $i = 0; $__LIST__ = $navarr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$voname): $mod = ($i % 2 );++$i;?><li>
@@ -173,9 +173,9 @@
         <!-- BEGIN BLOG -->
         <div class="row">
             <!-- BEGIN LEFT SIDEBAR -->            
-            <div class="col-md-9 col-sm-9 blog-posts margin-bottom-40">
+            <div class="col-md-9 col-sm-9 col-xs-9 blog-posts margin-bottom-40">
                  <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artList): $mod = ($i % 2 );++$i;?><div class="row">
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-4 col-xs-4 col-sm-4">
                         <!-- BEGIN CAROUSEL -->            
                         <div class="front-carousel">
                             <div id="myCarousel" class="carousel slide">
@@ -197,7 +197,7 @@
                         </div>
                         <!-- END CAROUSEL -->             
                     </div>
-                    <div class="col-md-8 col-sm-8">
+                    <div class="col-md-8 col-xs-8 col-sm-8">
                         <h2><a href="__URL__/article/detail/<?php echo ($artList["id"]); ?>"><?php echo ($artList["title"]); ?></a></h2>
                         <ul class="blog-info">
                             <li><i class="fa fa-user"></i> by admin</li>
@@ -219,7 +219,7 @@
 
 
             <!-- BEGIN RIGHT SIDEBAR -->            
-            <div class="col-md-3 col-sm-3 blog-sidebar">
+            <div class="col-md-3 col-sm-3 col-xs-3 blog-sidebar">
                 <!-- CATEGORIES START -->
                 <h2 class="no-top-space"><?php echo ($Lone["name"]); ?></h2>
                 <ul class="nav sidebar-categories margin-bottom-40">
@@ -289,14 +289,14 @@
 <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-4 space-mobile">
+                <div class="col-md-4 col-sm-4 col-xs-4 space-mobile">
                     <!-- BEGIN ABOUT -->                    
                     <h2>关于我们</h2>
                     <p class="margin-bottom-30">金瑞亿是一家为国内外大型企业提供专业供应链服务解决方案的服务商，并为服务对象打造一个集商流、物流、资金流、信息流一体化运作的供应链整合服务平台。</p>
                     <div class="clearfix"></div>                    
                     <!-- END ABOUT -->          
                 </div>
-                <div class="col-md-4 col-sm-4 space-mobile">
+                <div class="col-md-4 col-sm-4 col-xs-4 space-mobile">
                     <!-- BEGIN CONTACTS -->                                    
                     <h2>联系我们</h2>
                     <address class="margin-bottom-40">
@@ -309,8 +309,8 @@
                     <!-- END CONTACTS -->                                    
                                   
                 </div>
-                <div class="col-md-4 col-sm-4">
-                    <!-- BEGIN TWITTER BLOCK -->                                                    
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <!-- BEGIN TWITTER BLOCK -->
                     <h2>Latest Tweets</h2>
                     <dl class="dl-horizontal f-twitter">
                         <dt><i class="fa fa-twitter"></i></dt>
@@ -328,7 +328,7 @@
                             <span>8 min ago</span>
                         </dd>
                     </dl>                                       
-                    <!-- END TWITTER BLOCK -->                                                                        
+                    <!-- END TWITTER BLOCK -->
                 </div>
             </div>
         </div>
@@ -336,13 +336,13 @@
 <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-sm-8">
+            <div class="col-md-8 col-sm-8 col-xs-8">
                 <p>
                     <span class="margin-right-10">2013 &copy; KingRay. ALL Rights Reserved.</span> 
                     <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
                 </p>
             </div>
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-4 col-sm-4 col-xs-4">
                 <ul class="social-footer">
                     <li><a href="http://weibo.com/u/1884353652"><i class="fa fa-weibo"></i></a></li>
                     <li><a href="http://github.com/jia58960"><i class="fa fa-github"></i></a></li>

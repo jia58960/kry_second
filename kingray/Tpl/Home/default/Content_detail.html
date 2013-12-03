@@ -5,10 +5,10 @@
     <!-- BEGIN BREADCRUMBS -->   
     <div class="row breadcrumbs margin-bottom-40">
         <div class="container">
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-4 col-xs-4 col-sm-4">
                 <h1> </h1>
             </div>
-            <div class="col-md-8 col-sm-8">
+            <div class="col-md-8 col-xs-8 col-sm-8">
                 <ul class="pull-right breadcrumb">
                     <li><a href="__URL__/index" title="">首页</a></li>
                    <volist id="voname" name="navarr">
@@ -29,7 +29,7 @@
         <!-- BEGIN BLOG -->
         <div class="row">
             <!-- BEGIN LEFT SIDEBAR -->            
-            <div class="col-md-9 blog-item margin-bottom-40">
+            <div class="col-md-9 col-xs-9 blog-item margin-bottom-40">
                 <div class="blog-item-img">
                     <volist id="para" name="content.para">
                                 
@@ -70,7 +70,7 @@
             <!-- END LEFT SIDEBAR -->
 
             <!-- BEGIN RIGHT SIDEBAR -->            
-            <div class="col-md-3 blog-sidebar">
+            <div class="col-md-3 col-xs-3 blog-sidebar">
                 <!-- CATEGORIES START -->
                 <h2 class="no-top-space">{$Lone.name}</h2>
                 <ul class="nav sidebar-categories margin-bottom-40">
@@ -102,10 +102,10 @@
 
                     <volist id="last" name="hot">
                     <div class="row margin-bottom-10">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xs-3">
                             <img src="__PUBLIC__/Home/default/Images/people/img2-large.jpg" alt="" class="img-responsive">                        
                         </div>
-                        <div class="col-md-9 recent-news-inner">
+                        <div class="col-md-9 col-xs-9 recent-news-inner">
                             <h3><a href="__URL__/article/detail/{$last.id}">{$last.title}</a></h3>
                             <p>{$last.content|strip_tags|msubstr=0,20}</p>
                         </div>                        

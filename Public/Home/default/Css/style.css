@@ -19,11 +19,10 @@ Import fonts
 /* General body settings */
 body { 
   color: #000; 
-  font-size:13px; 
-  direction: ltr;
+  font-size:12px; 
   margin: 0 !important;
   padding: 0 !important;
-  font-family: 'Open Sans' !important;
+  font-family: 'microsoft yahei' !important;
   overflow-x: hidden;
 }
 
@@ -514,9 +513,10 @@ Header and header elements.
     transition:padding 0.3s ease-in-out;
     position: relative;
     z-index: 2;
+	padding: 25px 15px 15px;
 }
 .scrolling-fixed .navbar-brand{
-	padding:0 15px;
+	padding:15px;
 }
 
 .header a.logo-v1 img{
@@ -561,6 +561,7 @@ Header and header elements.
 	text-shadow: none;
 	padding-top: 26px;
 	box-shadow: none !important;
+	background-color: #ffffff;
 	/* border-top: solid 2px #0da3e2; */
 }
 .header.scrolling-fixed .nav li > a:hover,
@@ -763,7 +764,8 @@ Slider
 }
 
 .slide_title_white_bold {
-	font-weight: 400;
+	font-weight: bold;
+	color: #ffffff !important;
 }
 
 .slide_subtitle_white {
